@@ -54,7 +54,8 @@ public class ListOrderThread extends Thread {
     /**
      * List the same day orders
      */
-    private void listOrders(){
+   synchronized private void listOrders()
+    {
         ObjectMapper objectMapper = new ObjectMapper();
 
         synchronized (SalesSystem.orders) {
